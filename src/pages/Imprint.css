@@ -1,0 +1,23 @@
+.bd-masthead {
+  --bd-pink-rgb: 252, 92, 125;
+  --bs-blue-rgb: 106, 130, 251;
+  background-image: radial-gradient(
+      farthest-corner at 500px 500px,
+      rgba(var(--bs-blue-rgb), 0.5),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at top right,
+      rgba(var(--bd-pink-rgb), 0.5),
+      transparent 50%
+    );
+}
+
+.bg-masthead-blue {
+  --bs-blue-rgb: 106, 130, 251;
+  background-image: radial-gradient(
+    farthest-corner at 50% 50%,
+    rgba(var(--bs-blue-rgb), 0.5),
+    transparent 50%
+  );
+}

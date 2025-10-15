@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export interface PortfolioItem {
   id: string;
   title: string;
@@ -7,6 +9,7 @@ export interface PortfolioItem {
   buttonText?: string;
   bgColor?: string;
   onButtonClick?: () => void;
+  link?: string;
 }
 
 interface PortfolioCardProps {
@@ -23,6 +26,7 @@ function PortfolioCard({ item, className = "" }: PortfolioCardProps) {
     buttonText = "View",
     onButtonClick,
     bgColor = "#eea85bcc",
+    link,
   } = item;
 
   return (
@@ -58,12 +62,12 @@ function PortfolioCard({ item, className = "" }: PortfolioCardProps) {
           <p className="text-xs text-white/80">{description}</p>
         </div>
 
-        <button
+        <Link
           className="rounded-full bg-black/25 px-4 py-1 text-sm font-medium text-white transition hover:bg-white/20"
-          onClick={onButtonClick}
+          to={link || ""}
         >
           {buttonText}
-        </button>
+        </Link>
       </div>
     </div>
   );
