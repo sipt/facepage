@@ -34,7 +34,7 @@ function Imprint() {
       </div>
       <div className="min-h-[64px] w-full flex flex-row items-center justify-between px-[16px] md:px-[64px]">
         <span>©2025 企途</span>
-        <a href="/privacy">Privacy Policy</a>
+        <a href="/imprint/privacy">Privacy Policy</a>
       </div>
     </div>
   );

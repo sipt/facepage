@@ -40,7 +40,7 @@ function Home() {
             </h1>
 
             {/* 简介 */}
-            <p className="text-lg text-black/80 max-w-2xl mb-8 leading-relaxed">
+            <p className="text-xl text-black/80 max-w-2xl mb-8 leading-relaxed">
               If you want something, go get it.
             </p>
 

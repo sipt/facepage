@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App.tsx";
 import Home from "./pages/Home.tsx";
 import Imprint from "./pages/Imprint.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="imprint" element={<Imprint />} />
+          <Route path="imprint/privacy" element={<PrivacyPolicy />} />
         </Route>
       </Routes>
     </BrowserRouter>
