@@ -5,6 +5,7 @@ export interface PortfolioItem {
   backgroundImage: string;
   logoImage: string;
   buttonText?: string;
+  bgColor?: string;
   onButtonClick?: () => void;
 }
 
@@ -21,6 +22,7 @@ function PortfolioCard({ item, className = "" }: PortfolioCardProps) {
     logoImage,
     buttonText = "View",
     onButtonClick,
+    bgColor = "#eea85bcc",
   } = item;
 
   return (
@@ -42,7 +44,9 @@ function PortfolioCard({ item, className = "" }: PortfolioCardProps) {
         }}
       ></div>
 
-      <div className="absolute bottom-0 left-0 flex h-20 w-full items-center rounded-b-2xl bg-[#eea85bcc] bg-[linear-gradient(rgba(0,0,0,.4)_0_0)] px-4 backdrop-blur-sm">
+      <div
+        className={`absolute bottom-0 left-0 flex h-20 w-full items-center rounded-b-2xl bg-[${bgColor}] bg-[linear-gradient(rgba(0,0,0,.4)_0_0)] px-4 backdrop-blur-sm`}
+      >
         <img
           src={logoImage}
           alt={`${title} Logo`}
